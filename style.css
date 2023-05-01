@@ -1,0 +1,148 @@
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#main {
+    display: flex;
+    height: 100vh;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 2px 2px 5px grey;
+}
+
+.content {
+    flex-basis: 300px;
+}
+
+/*.prod-img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 100%;
+}*/
+
+.img-hold {
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.prod-full-det {
+    padding: 10px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 10pt;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+.prod-type {
+    letter-spacing: 3px;
+}
+
+.prod-title {
+    font-family: 'Fraunces', serif;
+    color: hsl(212 , 21%, 14%);
+}
+
+.price {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    display: inline-block;
+}
+
+.org-price {
+    display: inline;
+    margin-left: 20px;
+
+}
+
+.add-to-cart {
+    width: 100%;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Montserrat', sans-serif;
+    word-spacing: 3px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    box-shadow: inset 0 12px 16px 0 rgba(101, 194, 160, 0.2), inset 0 17px 50px 0 rgba(82, 173, 140, 0.19);
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+        height: 80%;
+        align-content: center;
+        justify-content: center;
+        max-width: 300px;
+    }
+
+    .content {
+        flex-basis: 400px;
+    }
+
+    .img-hold {
+        background-image: url(./images/image-product-mobile.jpg);
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+@media (min-width: 1080px) {
+    .add-to-cart span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+      
+    .add-to-cart span:after {
+        content: '🛒';
+        position: relative;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+      
+    .add-to-cart:hover span {
+        padding-right: 25px;
+    }
+      
+    .add-to-cart:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+}
