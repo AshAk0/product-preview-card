@@ -33,18 +33,17 @@ body {
     flex-basis: 300px;
 }
 
-/*.prod-img {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+.prod-img {
+    border-radius: 10px 0 0 10px;
     width: 100%;
     height: 100%;
-}*/
+}
 
-.img-hold {
+/*.img-hold {
     background-image: url(./images/image-product-desktop.jpg);
     background-size: cover;
     border-radius: 10px 0 0 10px;
-}
+}*/
 
 .prod-full-det {
     padding: 10px;
@@ -113,10 +112,8 @@ p {
         flex-basis: 400px;
     }
 
-    .img-hold {
-        background-image: url(./images/image-product-mobile.jpg);
-        background-size: cover;
-        border-radius: 10px 10px 0 0;
+    .prod-img {
+        border-radius: 10px 10px 0px 0px;
     }
 }
 
